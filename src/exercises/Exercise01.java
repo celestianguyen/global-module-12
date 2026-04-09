@@ -1,10 +1,9 @@
 package exercises;
 
 import util.ArrayListUtil;
-import util.InputUtil;
+import util.IOUtil;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Scanner;
 
@@ -40,7 +39,7 @@ public class Exercise01 {
 
 
         //Prompt for n
-        int n = InputUtil.inputPositive("Please enter an integer number of elements: ");
+        int n = IOUtil.inputPositive("Please enter an integer number of elements: ");
 
         //loop to fill in elements
         for (int i = 0; i < n; i++) {
@@ -71,7 +70,7 @@ public class Exercise01 {
          */
 
         //input element k
-        int k = InputUtil.inputPositive("\nPlease enter an integer element k: ");
+        int k = IOUtil.inputPositive("\nPlease enter an integer element k: ");
         boolean found = false;
 
         //display positions of k if available
@@ -107,7 +106,7 @@ public class Exercise01 {
         h. Remove all elements in a that have value x entered from the keyboard
          */
         System.out.println("\nh. Remove all elements in a that have value x entered from the keyboard");
-        int x = InputUtil.inputPositive("Please enter an integer value x: ");
+        int x = IOUtil.inputPositive("Please enter an integer value x: ");
         ArrayList<Integer> removedList = new ArrayList<>(a);
         removedList.removeAll(Collections.singleton(x));
 
@@ -122,9 +121,9 @@ public class Exercise01 {
         System.out.println("\ni. Insert one element value at any index");
         ArrayList<Integer> insertedList = new ArrayList<>(a);
 
-        int element = InputUtil.inputPositive("Please an integer element: ");
+        int element = IOUtil.inputPositive("Please an integer element: ");
 
-        int value = InputUtil.inputPositive("Please enter an index you want to insert the element: ");
+        int value = IOUtil.inputPositive("Please enter an index you want to insert the element: ");
 
         boolean inserted = ArrayListUtil.insertElement(insertedList, element, value);
 
@@ -150,16 +149,7 @@ public class Exercise01 {
         System.out.println("The second largest value in a");
         System.out.println("second max = " + ArrayListUtil.findSecondMax(a));
 
-
-
-
-
-
-
-
-
-
-
+        scanner.close();
 
 
     }
